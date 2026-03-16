@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>東光醫療器材</title>
+  <script>
+    /**
+     * GitHub Pages SPA redirect trick.
+     * When GitHub Pages can't find a file (e.g. /website/category/行動輔具),
+     * it serves this 404.html. We capture the intended path and redirect to
+     * index.html with it encoded as ?p=<path>, which the router decodes.
+     *
+     * Works for both:
+     *   subdirectory:  https://org.github.io/website/category/X  → base = /website
+     *   custom domain: https://www.domain.com/category/X         → base = ''
+     */
+    (function () {
+      var segs = window.location.pathname.split('/').filter(Boolean);
+      var routeRoots = { category: 1, product: 1, search: 1 };
+
+      // Determine base path and route portion
+      var base = '';
+      var route = segs.join('/');
+      if (segs.length > 0 && !routeRoots[segs[0]]) {
+        base = '/' + segs[0];
+        route = segs.slice(1).join('/');
+      }
+
+      var search = window.location.search;
+      var qs = route ? ('p=' + encodeURIComponent(route) + (search ? '&' + search.slice(1) : ''))
+                     : search.slice(1);
+
+      window.location.replace(window.location.origin + base + '/' + (qs ? '?' + qs : ''));
+    })();
+  </script>
+</head>
+<body></body>
+</html>
