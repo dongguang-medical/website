@@ -27,7 +27,7 @@ subsidy: []
 tags: []
 specs:
   - label: 產地
-    value: 台灣製造
+    value: "台灣製造"
 images:
   - /assets/uploads/misc-27-1.jpg
   - /assets/uploads/misc-27-2.jpg

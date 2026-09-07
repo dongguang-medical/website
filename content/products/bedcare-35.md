@@ -13,9 +13,11 @@ subsidy: []
 tags: []
 specs:
   - label: 滅菌狀態
-    value: 已滅菌
-  - label: 包裝規格
-    value: 5支/包
+    value: "已滅菌"
+  - label: 內容物
+    value: "5支/包"
+  - label: 用途
+    value: "旅遊代替牙刷、兒童學習牙刷等"
 images:
   - /assets/uploads/bedcare-35-1.jpg
   - /assets/uploads/bedcare-35-2.jpg
@@ -23,12 +25,3 @@ images:
 published: true
 source: shopee
 ---
-
-商品名稱：海綿潔牙棒
-內容物：5支/包
-已經過滅菌處理
-
-用途：
-旅遊代替牙刷
-兒童學習牙刷
-等

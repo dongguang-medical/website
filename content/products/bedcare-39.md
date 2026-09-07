@@ -11,7 +11,15 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/3548457723
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 長
+    value: "72cm"
+  - label: 寬
+    value: "33cm"
+  - label: 總高度
+    value: "81~111cm"
+  - label: 床架高度
+    value: "需介於29~52cm"
 images:
   - /assets/uploads/bedcare-39-1.jpg
   - /assets/uploads/bedcare-39-2.jpg
@@ -19,17 +27,12 @@ published: true
 source: shopee
 ---
 
-產品特色：
-輔助上下床
-適用於各式床墊
-扶手,腳管皆可調整高度
-附書報置物袋
-握把軟墊設計,更為舒適
-規格:
-長72cm
-寬33cm
-總高度81~111cm
-床架高度需介於29~52cm
+### 產品特色
 
--本產品需自行簡易組裝
--消費者使用前應詳閱產品說明書
+- 輔助上下床
+- 適用於各式床墊
+- 扶手,腳管皆可調整高度
+- 附書報置物袋
+- 握把軟墊設計,更為舒適
+
+本產品需自行簡易組裝

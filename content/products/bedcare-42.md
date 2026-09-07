@@ -11,7 +11,11 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/1047638714
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 總長
+    value: "16CM"
+  - label: 刷毛
+    value: "7CM"
 images:
   - /assets/uploads/bedcare-42-1.jpg
   - /assets/uploads/bedcare-42-2.jpg
@@ -19,7 +23,3 @@ images:
 published: true
 source: shopee
 ---
-
-管路照護用品。鼻胃管、氣切等管路的清潔與灌食用品。
-
-實際庫存與價格以門市為準，歡迎來電洽詢。

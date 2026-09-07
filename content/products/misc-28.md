@@ -11,14 +11,15 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/3656634496
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 材質
+    value: "PVC,布料"
+  - label: 尺寸
+    value: "25X19.5cm"
+  - label: 數量
+    value: "36入/盒"
 images:
   - /assets/uploads/misc-28-1.jpg
 published: true
 source: shopee
 ---
-
-產品規格：
-材質:PVC,布料
-尺寸:25X19.5cm
-數量:36入/盒
