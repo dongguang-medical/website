@@ -691,7 +691,13 @@
   color: var(--color-text-primary);
 }
 
-/* 規格與價格：一列一個規格，各自帶價 */
+/* 可選規格與價格：與固定屬性同卡，故以底線分隔而非另開一張卡 */
+.cat-variant-table {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
 .cat-variant-table thead th {
   width: auto;
   background: none;
@@ -719,6 +725,25 @@
   color: var(--color-primary);
   font-weight: 700;
   white-space: nowrap;
+}
+
+/* 法定標示：查證用的小字，刻意不搶版面 */
+.cat-legal h2 {
+  font-size: 15px;
+}
+
+.cat-legal-body {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+
+/* 販售藥商資訊：每頁相同，比商品自己的標示再淡一階 */
+.cat-legal-store {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
 }
 
 /* Related products */

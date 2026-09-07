@@ -184,6 +184,14 @@ collections:
           - { label: 規格, name: label, widget: string }
           - { label: 價格, name: price, widget: number, value_type: int, min: 0 }
 
+      # 法定標示整段收在這裡，不要混進商品說明。販售藥商（東光自己）的資訊
+      # 由產生器自動附在下方，不必寫在這裡。
+      - label: 法定標示
+        name: regulatory
+        widget: text
+        required: false
+        hint: 依序填許可證字號、許可證品名、持證藥商、製造廠、製造廠地址。非管制品（碗盤、保健食品等）請留空
+
       - label: 提供方式
         name: offering
         widget: select

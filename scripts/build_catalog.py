@@ -75,6 +75,16 @@ LOGO = "assets/images/logo.png"
 PHONE_DISPLAY = "(06) 290-7244"
 PHONE_TEL = "062907244"
 
+# 販售藥商（東光自己）的法定資訊。每個商品都一樣，因此存在這裡由程式附在
+# 各商品「法定標示」區塊下方，不逐項寫進 frontmatter。
+STORE_REGULATORY = """
+販售藥商：東光儀器有限公司
+藥商地址：台南市東區崇德路 677、679 號
+藥商許可執照字號：南市衛藥販字第6221011898號
+諮詢專線：0911465368
+消費者使用前應詳閱產品說明書。
+"""
+
 # 蝦皮總開關。關閉時全站不出現任何蝦皮連結（頁首資訊列、頁尾圖示、商品頁
 # 下單按鈕），商品卡片的「線上可購」標記也一併隱藏——沒有可下單的去處時，
 # 那個標記等於在騙人。商品的 shopee_url 資料不動，改回 True 就全部回來。
@@ -146,7 +156,12 @@ def _scalar(val):
 
 
 def parse_frontmatter(text):
-    """回傳 (dict, body)。支援：純量、字串清單、label/value 物件清單。"""
+    """回傳 (dict, body)。
+
+    支援：純量、字串清單、label/value 物件清單，以及 YAML 的區塊字串（`|`）。
+    區塊字串是給整段多行文字用的（如法規標示），後台的多行輸入框存檔時也會
+    寫成這個格式，因此必須讀得回來。
+    """
     if not text.startswith("---"):
         return {}, text.strip()
     lines = text.split("\n")
@@ -161,8 +176,27 @@ def parse_frontmatter(text):
     data = {}
     cur_list = None   # 目前累積中的清單
     cur_dict = None   # 清單中累積中的物件項目
+    block_key = None  # 目前累積中的區塊字串
+    block_lines = []
+
+    def close_block():
+        """把累積的區塊字串收進 data，去掉尾端空行。"""
+        while block_lines and not block_lines[-1].strip():
+            block_lines.pop()
+        data[block_key] = "\n".join(block_lines)
 
     for raw in lines[1:end]:
+        # 區塊字串優先處理：內容裡的空行與 # 都是文字，不能當空行或註解略過
+        if block_key is not None:
+            if not raw.strip():
+                block_lines.append("")
+                continue
+            if len(raw) - len(raw.lstrip(" ")) >= 2:
+                block_lines.append(raw[2:])
+                continue
+            close_block()
+            block_key, block_lines = None, []
+
         if not raw.strip() or raw.lstrip().startswith("#"):
             continue
         indent = len(raw) - len(raw.lstrip(" "))
@@ -172,6 +206,10 @@ def parse_frontmatter(text):
         if indent == 0 and m:                       # 頂層 key
             key, val = m.group(1), _strip_comment(m.group(2))
             cur_dict = None
+            if val.startswith("|"):                  # 區塊字串，內容在後續縮排行
+                block_key, block_lines = key, []
+                cur_list = None
+                continue
             if val in ("", "[]"):
                 data[key] = []                       # 可能接續清單項目
                 cur_list = data[key] if val == "" else None
@@ -361,6 +399,9 @@ def load_products(brands, taxonomy=None):
             "variants": variants,
             # 規格表的欄位名稱，如「尺寸」；沒填就用通用的「規格」
             "variant_label": s("variant_label") or "規格",
+            # 法定標示（許可證字號、品名、持證藥商、製造廠與地址），整段原文照登。
+            # 非管制品（碗盤、保健食品等）留空，前台就不顯示該區塊。
+            "regulatory": str(fm.get("regulatory", "") or "").strip(),
             "brand": brand,
             "brand_slug": brand_slug if brand else "",
             "offering": offering,
@@ -1613,37 +1654,60 @@ def build_product_pages(products):
                 for i, img in enumerate(images))
             thumbs = f'<div class="cat-gallery-thumbs">{btns}</div>'
 
-        variants_html = ""
-        if product["variants"]:
-            rows = "".join(
-                f'<tr><th scope="row">{esc(v["label"])}</th>'
-                f'<td>{esc(format_price(v["price"])) or "洽詢"}</td></tr>'
-                for v in product["variants"])
-            variants_html = f"""        <section class="cat-block">
-          <h2>規格與價格</h2>
-          <div style="overflow-x:auto;">
-            <table class="cat-spec-table cat-variant-table">
-              <thead><tr><th scope="col">{esc(product["variant_label"])}</th>
-                <th scope="col">價格</th></tr></thead>
-              <tbody>{rows}</tbody>
-            </table>
-          </div>
-        </section>
-"""
+        # 商品規格：可選規格與固定屬性合成同一張卡，全頁只出現一次「規格」。
+        # 兩張分開的卡都叫規格，會讓人以為是不同的東西。
+        variant_part = specs_part = ""
+        variants = product["variants"]
+        if variants:
+            prices = [v["price"] for v in variants if v["price"] is not None]
+            if prices and len(set(prices)) > 1:
+                # 價格有差異才值得兩欄表；排在固定屬性之前，那是購買決策
+                rows = "".join(
+                    f'<tr><th scope="row">{esc(v["label"])}</th>'
+                    f'<td>{esc(format_price(v["price"])) or "洽詢"}</td></tr>'
+                    for v in variants)
+                variant_part = (
+                    '            <table class="cat-spec-table cat-variant-table">\n'
+                    f'              <thead><tr><th scope="col">{esc(product["variant_label"])}</th>'
+                    '<th scope="col">價格</th></tr></thead>\n'
+                    f'              <tbody>{rows}</tbody>\n'
+                    '            </table>\n')
+            else:
+                # 全部同價：價格上方已經寫過，這裡只需列出有哪些選項
+                specs_part += (
+                    f'<tr><th scope="row">{esc(product["variant_label"])}</th>'
+                    f'<td>{esc("、".join(v["label"] for v in variants))}</td></tr>')
+
+        specs_part += "".join(
+            f'<tr><th scope="row">{esc(d.get("label", ""))}</th>'
+            f'<td>{esc(d.get("value", ""))}</td></tr>'
+            for d in product["specs"])
 
         specs_html = ""
-        if product["specs"]:
-            rows = "".join(
-                f'<tr><th scope="row">{esc(d.get("label", ""))}</th>'
-                f'<td>{esc(d.get("value", ""))}</td></tr>'
-                for d in product["specs"])
+        if variant_part or specs_part:
+            attr_table = (f'            <table class="cat-spec-table">{specs_part}</table>\n'
+                          if specs_part else "")
             specs_html = f"""        <section class="cat-block">
           <h2>商品規格</h2>
           <div style="overflow-x:auto;">
-            <table class="cat-spec-table">{rows}</table>
-          </div>
+{variant_part}{attr_table}          </div>
         </section>
 """
+
+        # 法定標示：查證用資訊，不是賣點，用小字低對比。商品自己的標示在上，
+        # 店家藥商資訊由 STORE_REGULATORY 統一附在下方，不必逐項寫進 frontmatter。
+        legal_html = ""
+        if product["regulatory"]:
+            legal_html = ('        <section class="cat-block cat-legal">\n'
+                          '          <h2>法定標示</h2>\n'
+                          '          <div class="cat-legal-body">'
+                          + "<br>\n".join(esc(ln) for ln
+                                          in product["regulatory"].split("\n")
+                                          if ln.strip())
+                          + '<p class="cat-legal-store">'
+                          + "<br>\n".join(esc(ln) for ln
+                                          in STORE_REGULATORY.strip().split("\n"))
+                          + "</p></div>\n        </section>\n")
 
         desc_html = ""
         body_html = md_to_html(product["body"])
@@ -1756,7 +1820,7 @@ def build_product_pages(products):
             </div>
           </div>
         </div>
-{desc_html}{variants_html}{specs_html}{related_html}
+{specs_html}{desc_html}{legal_html}{related_html}
       </div>
     </div>
 """
