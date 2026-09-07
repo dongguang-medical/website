@@ -22,19 +22,14 @@ shopee_url: https://shopee.tw/product/8642264/13972269442
 subsidy: []
 tags: []
 specs:
-  - label: 規格選項
-    value: "便盆(均佳便盆椅專用)｜中空坐墊｜U型座墊｜子母坐墊"
+  - label: 尺寸
+    value: "長 42cm／寬 39cm／高 4.5cm"
+  - label: 子母型內徑
+    value: "高 27cm／寬 22cm"
 images:
   - /assets/uploads/bath-safety-10-1.jpg
 published: true
 source: import
 ---
 
-尺寸:
--長:42cm
--寬:39cm
--高:4.5cm
-子母行內徑
--高:27cm
--寬:22cm
 基本適用各式便盆椅、洗澡椅
