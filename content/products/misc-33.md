@@ -11,20 +11,15 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/3846568885
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 材質
+    value: "底座:鐵製+烤漆／中柱:不鏽鋼／弧型墊:皮墊包覆高密度泡棉"
+  - label: 規格
+    value: "墊長約25cm、寬17cm，最低約38cm，最高約60cm"
 images:
   - /assets/uploads/misc-33-1.jpg
 published: true
 source: shopee
 ---
 
-♥️此商品重量限制、1單限1台♥️
-材質：
-底座:鐵製+烤漆
-中柱:不鏽鋼
-弧型墊:皮墊包覆高密度泡棉。
-
 可調整高度
-
-規格：
-墊長約25cm、寬17cm，最低約38cm，最高約60cm。

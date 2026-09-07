@@ -21,7 +21,16 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/1296616099
 subsidy: []
 tags: []
-specs: []
+regulatory: |
+  許可證字號：衛部醫器製壹字第005319號
+  許可證品名：帝通 冷熱敷袋 (未滅菌)
+  持證藥商：喬通實業有限公司醫材廠
+  製造廠地址：高雄市仁武區鳳仁路285巷7號
+specs:
+  - label: 母
+    value: "30x18cm"
+  - label: 子
+    value: "28x10cm"
 images:
   - /assets/uploads/rehab-31-1.jpg
   - /assets/uploads/rehab-31-2.jpg
@@ -30,21 +39,8 @@ published: true
 source: shopee
 ---
 
-帝通冰枕
+退熱降溫
 
-### 退熱降溫
+減緩疼痛
 
-### 減緩疼痛
-
-### 家庭必備
-
-### 規   格
-
-母（30x18cm）
-
-子（28x10cm）
-
-醫療器材許可證所載核准字號：衛部醫器製壹字第005319號
-醫療器材許可證所載品名：帝通 冷熱敷袋 (未滅菌)
-醫療器材許可證所載藥商名稱：喬通實業有限公司醫材廠
-製造廠名稱及地址：高雄市仁武區鳳仁路285巷7號
+家庭必備

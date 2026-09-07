@@ -19,7 +19,11 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/1044792028
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 圓球形／橄欖球型
+    value: "約七公分大小，高密度泡棉製"
+  - label: 刺球形
+    value: "約七公分大小，PVC製，無塑膠臭味"
 images:
   - /assets/uploads/rehab-33-1.jpg
 published: true
@@ -29,6 +33,3 @@ source: shopee
 復健用握力球
 握力訓練
 耐用，不易變形
-
-圓球形/橄欖球型：約七公分大小，高密度泡棉製
-刺球形：約七公分大小，PVC製，無塑膠臭味

@@ -21,7 +21,7 @@ subsidy: []
 tags: []
 specs:
   - label: 產地
-    value: 台灣製造
+    value: "台灣製"
 images:
   - /assets/uploads/rehab-32-1.jpg
 published: true
@@ -29,4 +29,5 @@ source: shopee
 ---
 
 台灣製 可直接放冰塊冷敷或放熱水熱敷
+
 註:熱水不得超過65度 否則會減少使用壽命
