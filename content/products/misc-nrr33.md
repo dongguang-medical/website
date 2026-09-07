@@ -10,14 +10,12 @@ rentable: false
 rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/1296278881
 subsidy: []
-tags:
-  - 美國進口
-  - 低噪音
+tags: []
 specs:
   - label: 型號
-    value: NRR33
+    value: "NRR33"
   - label: 產地
-    value: 美國進口
+    value: "美國進口"
 images:
   - /assets/uploads/misc-nrr33-1.jpg
   - /assets/uploads/misc-nrr33-2.jpg

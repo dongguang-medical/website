@@ -3,13 +3,13 @@ name: 杰奇 JM 多功能握式移位帶（無跨式）
 taxonomy: 臥床照護/移位輔具
 price: ""
 variants:
-  - label: "S"
+  - label: "S（25-33吋）"
     price: 1200
-  - label: "M"
+  - label: "M（28-36吋）"
     price: 1200
-  - label: "L"
+  - label: "L（33-44吋）"
     price: 1200
-  - label: "XL"
+  - label: "XL（38-50吋）"
     price: 1200
 variant_label: "尺寸"
 brand: 杰奇
@@ -31,14 +31,8 @@ regulatory: |
   製造廠：6131071313 杰奇有限公司
   製造廠地址：新北市樹林區俊英街84巷25號2樓
 specs:
-  - label: 產品特點
-    value: 符合補助項目【移位腰帶】、補助申請辦理及相關事宜，歡迎詢問
-  - label: 型號
-    value: "JM-245 (S)：25吋~33吋cm [4713809652450]｜JM-246 (M)：28吋~36吋cm [4713809652467]…等"
-  - label: 四種尺寸
-    value: "S號 25-33吋／M號 28-36吋／L號 33-44吋／XL號 38-50吋"
   - label: 材質
-    value: EVA+乳膠皮+PP帶+塑鋼扣+棉布
+    value: "EVA+乳膠皮+PP帶+塑鋼扣+棉布"
 images:
   - /assets/uploads/bedcare-24-1.jpg
 published: true

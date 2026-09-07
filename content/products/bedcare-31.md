@@ -18,10 +18,8 @@ regulatory: |
   製造廠：中國衛生材料生產中心股份有限公司
   製造廠地址：彰化縣彰化市福田里彰南路6段424巷21號
 specs:
-  - label: 規格選項
-    value: "單包裝20片｜盒裝100片"
   - label: 數量
-    value: 1包3g 1盒100包
+    value: "1包3g 1盒100包"
 images:
   - /assets/uploads/bedcare-31-1.jpg
   - /assets/uploads/bedcare-31-2.jpg

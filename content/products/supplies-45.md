@@ -17,9 +17,22 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/4252702042
 subsidy: []
 tags: []
+regulatory: |
+  許可證字號：衛署醫器陸輸壹字第001579號
+  許可證品名："優美" 採血針 (滅菌)
+  持證藥商：宏春貿易有限公司
+  製造廠：M640369000 STERILANCE MEDICAL (SUZHOU) INC.
+  製造廠地址：NO. 68 LITANGHE ROAD, XIANGCHENG SUZHOU, JIANGSU 215133, CHINA
+  許可證字號：衛署醫器陸輸壹字第001248號
+  許可證品名：“明傑”採血針(滅菌)
+  持證藥商：明傑企業社
+  製造廠：STERILANCE MEDICAL (SUZHOU) INC.
+  製造廠地址：NO. 68 LITANGHE ROAD, XIANGCHENG, SUZHOU, JIANGSU 215133, P.R. CHINA
 specs:
-  - label: 滅菌狀態
-    value: 已滅菌
+  - label: 數量
+    value: "200入/盒"
+  - label: 包裝
+    value: "單支滅菌包裝"
   - label: 廠牌
     value: "優美｜明傑"
 images:
@@ -29,23 +42,3 @@ images:
 published: true
 source: import
 ---
-
-產品規格：
-200入/盒
-單支滅菌包裝
-
-醫療器材許可證所載品名："優美" 採血針 (滅菌)
-醫療器材許可證所載核准字號：衛署醫器陸輸壹字第001579號
-醫療器材許可證所載藥商名稱：宏春貿易有限公司
-製造廠名稱：M640369000 STERILANCE MEDICAL (SUZHOU) INC.
-製造廠地址：NO. 68 LITANGHE ROAD, XIANGCHENG SUZHOU, JIANGSU 215133, CHINA
-
-醫療器材許可證所載核准字號：衛署醫器陸輸壹字第001248號
-醫療器材許可證所載品名：“明傑”採血針(滅菌)
-醫療器材許可證所載藥商名稱：明傑企業社
-製造廠名稱及地址：STERILANCE MEDICAL (SUZHOU) INC.
-NO. 68 LITANGHE ROAD, XIANGCHENG, SUZHOU, JIANGSU 215133, P.R. CHINA
-提醒您：
--使用前請詳閱使用說明書-
-井
-惑

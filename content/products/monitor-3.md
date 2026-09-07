@@ -11,7 +11,13 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/1047684596
 subsidy: []
 tags: []
-specs: []
+regulatory: |
+  製造廠：MITSUMI PHILIPPINES INC
+specs:
+  - label: 適用型號
+    value: "HEM7320、HEM7230、HEM7310、JPN500、JPN600、HEM8712、HEM7121"
+  - label: 產地
+    value: "菲律賓"
 images:
   - /assets/uploads/monitor-3-1.jpg
   - /assets/uploads/monitor-3-2.jpg
@@ -20,9 +26,3 @@ source: import
 ---
 
 台灣歐姆龍原廠公司貨
-
-適用型號HEM7320，HEM7230，HEM7310，JPN500，JPN600，HEM8712，HEM7121
-
-製造廠名稱: MITSUMI PHILIPPINES INC
-
-產地:菲律賓

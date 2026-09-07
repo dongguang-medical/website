@@ -10,18 +10,14 @@ rentable: false
 rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/6358166188
 subsidy: []
-tags:
-  - 防水材質
-  - 加大尺寸
+tags: []
 specs:
-  - label: 孔數
-    value: 6 孔
   - label: 材質
-    value: EVA 樹脂
+    value: "EVA 樹脂"
   - label: 尺寸
-    value: 45-60cm
+    value: "45-60cm"
   - label: 數量
-    value: 1入
+    value: "1入"
 images:
   - /assets/uploads/bath-safety-4-1.jpg
   - /assets/uploads/bath-safety-4-2.jpg

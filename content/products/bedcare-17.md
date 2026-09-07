@@ -12,10 +12,8 @@ shopee_url: https://shopee.tw/product/8642264/1044904539
 subsidy: []
 tags: []
 specs:
-  - label: 規格選項
-    value: "有牙粉(11支入)｜無牙粉(11支入)"
   - label: 用途
-    value: 口腔清潔，去除口腔異味
+    value: "口腔清潔，去除口腔異味"
 images:
   - /assets/uploads/bedcare-17-1.jpg
 published: true

@@ -20,14 +20,10 @@ rentable: false
 rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/368265770
 subsidy: []
-tags:
-  - 台灣製造
-  - 透氣設計
+tags: []
 specs:
   - label: 產地
-    value: 台灣製造
-  - label: 規格選項
-    value: "靠墊＋黑色網布套｜靠墊｜黑色網布套"
+    value: "台灣製造"
 images:
   - /assets/uploads/misc-8-1.jpg
   - /assets/uploads/misc-8-2.jpg
@@ -36,8 +32,6 @@ images:
 published: true
 source: import
 ---
-
-**因體積限制，一張單限下一件，**
 
 台灣製造品質有保障
 
