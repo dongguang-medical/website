@@ -13,19 +13,13 @@ subsidy: []
 tags: []
 specs:
   - label: 材質
-    value: 紙軸
-  - label: 顏色
-    value: 白色
+    value: "棉球：脫脂棉／軸：紙類／抗菌劑：棉表面、軸表面"
+  - label: 容量
+    value: "200支入"
+  - label: 產地
+    value: "中國"
 images:
   - /assets/uploads/supplies-64-1.jpg
 published: true
 source: shopee
 ---
-
-材質
-棉球：脫脂棉
-軸：紙類
-抗菌劑：棉表面、軸表面
-
-容量200支入
-產地：中國

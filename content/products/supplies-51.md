@@ -11,24 +11,22 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/50741955
 subsidy: []
 tags: []
-specs: []
+regulatory: |
+  許可證字號：衛署醫器製字第002150號
+  許可證品名：“中衛”酒精棉片
+  持證藥商：中國衛生材料生產中心股份有限公司
+  製造廠：中國衛生材料生產中心股份有限公司
+  製造廠地址：彰化市福田里彰南路六段424巷21號
+specs:
+  - label: 規格
+    value: "100片/盒"
+  - label: 包裝
+    value: "單片包裝"
+  - label: 用途
+    value: "消毒、清潔"
 images:
   - /assets/uploads/supplies-51-1.jpg
   - /assets/uploads/supplies-51-2.jpg
 published: true
 source: shopee
 ---
-
-規格：100片/盒
-
-單片包裝
-可用於消毒、清潔
-
-醫療器材許可證所載核准字號：衛署醫器製字第002150號
-醫療器材許可證所載品名：中衛”酒精棉片
-醫療器材許可證所載藥商名稱：中國衛生材料生產中心股份有限公司
-製造廠名稱：中國衛生材料生產中心股份有限公司
-製造廠地址：彰化市福田里彰南路六段424巷21號
-製造日期：詳見外盒標示
-
-提醒您：
