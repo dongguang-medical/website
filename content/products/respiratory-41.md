@@ -13,13 +13,9 @@ subsidy: []
 tags: []
 specs:
   - label: 長度
-    value: "1節"
+    value: "15公分／節"
 images:
   - /assets/uploads/respiratory-41-1.jpg
 published: true
 source: shopee
 ---
-
-氧氣用品。供氧時使用的管路與周邊用品。
-
-實際庫存與價格以門市為準，歡迎來電洽詢。

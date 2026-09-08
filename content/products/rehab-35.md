@@ -11,7 +11,23 @@ rental_price: ""
 shopee_url: https://shopee.tw/product/8642264/2606354898
 subsidy: []
 tags: []
-specs: []
+specs:
+  - label: 本體尺寸
+    value: "35x20x15cm"
+  - label: 本體重量
+    value: "1.5kg"
+  - label: 產品材質
+    value: "主體PU／耐磨透氣網布"
+  - label: 產品顏色
+    value: "淺棕"
+  - label: 使用電壓
+    value: "DC12V 2.5A"
+  - label: 消耗功率
+    value: "30W"
+  - label: 產品配件
+    value: "中文說明書、車充"
+  - label: 保固期間
+    value: "1年"
 images:
   - /assets/uploads/rehab-35-1.jpg
   - /assets/uploads/rehab-35-2.jpg
@@ -21,16 +37,6 @@ images:
 published: true
 source: shopee
 ---
-
-商品描述
-本體尺寸: 35x20x15cm
-本體重量: 1.5kg
-產品材質: 主體PU / 耐磨透氣網布
-產品顏色: 淺棕
-保固期間: 1年
-使用電壓: DC12V 2.5A
-消耗功率: 30W
-產品配件: 中文說明書 / 車充
 
 - 溫感燈頭，緩和身體
 - 耐磨透氣網布，精緻皮感

@@ -12,18 +12,12 @@ shopee_url: https://shopee.tw/product/8642264/4751314627
 subsidy: []
 tags: []
 specs:
-  - label: 尺寸／容量
-    value: 800cc
+  - label: 適用機型
+    value: "雃博抽痰機"
+  - label: 容量
+    value: "800cc"
 images:
   - /assets/uploads/respiratory-35-1.jpg
 published: true
 source: shopee
 ---
-
-此商品為雃博抽痰機專用之抽痰杯
-
-產品規格：
-容量：800cc
-
-提醒您：
--使用前請詳閱使用說明書-
