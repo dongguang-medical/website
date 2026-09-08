@@ -1,17 +1,7 @@
 ---
 name: 歐姆龍 OMRON HBF-222T 體脂計
 taxonomy: 健康量測/體重與體脂計
-price: ""
-variants:
-  - label: "贈多功能自動傘"
-    price: 2780
-  - label: "無贈品"
-    price: 2780
-  - label: "贈樂美雅料理盤"
-    price: 2880
-  - label: "贈康寧強強化餐盤"
-    price: 2880
-variant_label: "規格"
+price: 2780
 brand: 歐姆龍
 offering:
   - 線上選購

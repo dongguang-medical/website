@@ -1,13 +1,7 @@
 ---
 name: 熱映光電 TH889 耳溫槍（附耳套21個）
 taxonomy: 健康量測/體溫計
-price: ""
-variants:
-  - label: "一支"
-    price: 1350
-  - label: "一支(贈酒精棉片1盒)"
-    price: 1350
-variant_label: "規格"
+price: 1350
 brand: 熱映
 offering:
   - 線上選購

@@ -3,9 +3,9 @@ name: 日本精密 NISSEI MT-30CPLB 迷你耳溫槍
 taxonomy: 健康量測/體溫計
 price: ""
 variants:
-  - label: "粉紅(贈酒精棉片1盒)"
+  - label: "粉紅"
     price: 1580
-  - label: "藍(贈酒精棉片1盒)"
+  - label: "藍"
     price: 1580
 variant_label: "顏色"
 brand: 日本精密

@@ -3,15 +3,11 @@ name: 歐姆龍 OMRON HBF-217 體脂計
 taxonomy: 健康量測/體重與體脂計
 price: ""
 variants:
-  - label: "粉紅+樂美雅料理盤"
+  - label: "粉紅"
     price: 1980
-  - label: "粉紅+雙層便當盒"
+  - label: "白"
     price: 1980
-  - label: "白+雙層便當盒"
-    price: 1980
-  - label: "白+樂美雅料理盤"
-    price: 2050
-variant_label: "規格"
+variant_label: "顏色"
 brand: 歐姆龍
 offering:
   - 線上選購
